@@ -130,8 +130,9 @@ cp "$FINDER_APP_DIR"/finder-test.sh ${OUTDIR}/rootfs/home
 cp "$FINDER_APP_DIR"/writer ${OUTDIR}/rootfs/home
 cp "$FINDER_APP_DIR"/finder.sh ${OUTDIR}/rootfs/home
 cp "$FINDER_APP_DIR"/finder-test.sh ${OUTDIR}/rootfs/home
-cp "$FINDER_APP_DIR"/conf/username.txt ${OUTDIR}/rootfs/home
-cp "$FINDER_APP_DIR"/conf/assignment.txt ${OUTDIR}/rootfs/home
+mkdir -p ${OUTDIR}/rootfs/home/conf
+cp "$FINDER_APP_DIR"/conf/username.txt ${OUTDIR}/rootfs/home/conf
+cp "$FINDER_APP_DIR"/conf/assignment.txt ${OUTDIR}/rootfs/home/conf
 cp "$FINDER_APP_DIR"/autorun-qemu.sh ${OUTDIR}/rootfs/home
 cp "$FINDER_APP_DIR"/start-qemu-app.sh ${OUTDIR}/rootfs/home
 cp "$FINDER_APP_DIR"/start-qemu-terminal.sh ${OUTDIR}/rootfs/home

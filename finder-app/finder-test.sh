@@ -32,7 +32,7 @@ echo "Writing ${NUMFILES} files containing string ${WRITESTR} to ${WRITEDIR}"
 rm -rf "${WRITEDIR}"
 
 # create $WRITEDIR if not assignment1
-assignment=`cat ../conf/assignment.txt`
+assignment=`cat conf/assignment.txt`
 
 if [ $assignment != 'assignment1' ]
 then
@@ -49,11 +49,11 @@ then
 	fi
 fi
 #echo "Removing the old writer utility and compiling as a native application"
-if [ -e writer ]
-then
-  make clean
-fi
-make
+# if [ -e writer ]
+# then
+#   make clean
+# fi
+# make
 
 for i in $( seq 1 $NUMFILES)
 do
@@ -65,7 +65,7 @@ OUTPUTSTRING=$(./finder.sh "$WRITEDIR" "$WRITESTR")
 # remove temporary directories
 rm -rf /tmp/aeld-data
 
-make clean
+# make clean
 set +e
 echo ${OUTPUTSTRING} | grep "${MATCHSTR}"
 if [ $? -eq 0 ]; then
